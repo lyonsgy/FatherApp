@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5C94C0222388D600508F4A /* CommonFuction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C94BE222388D600508F4A /* CommonFuction.m */; };
 		2B6C9721221F8F5000483DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C9720221F8F5000483DEA /* AppDelegate.m */; };
 		2B6C9724221F8F5000483DEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C9723221F8F5000483DEA /* ViewController.m */; };
 		2B6C9727221F8F5000483DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C9725221F8F5000483DEA /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B5C94BD222388D600508F4A /* CommonFuction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFuction.h; sourceTree = "<group>"; };
+		2B5C94BE222388D600508F4A /* CommonFuction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFuction.m; sourceTree = "<group>"; };
+		2B5C94BF222388D600508F4A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2B6C971C221F8F5000483DEA /* FatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6C971F221F8F5000483DEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B6C9720221F8F5000483DEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 		2B6C973F221F8F5100483DEA /* FatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6C9743221F8F5100483DEA /* FatherAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FatherAppUITests.m; sourceTree = "<group>"; };
 		2B6C9745221F8F5100483DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6C978F221F90CB00483DEA /* FatherApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FatherApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,10 @@
 		2B6C971E221F8F5000483DEA /* FatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				2B6C978F221F90CB00483DEA /* FatherApp.entitlements */,
+				2B5C94BF222388D600508F4A /* PrefixHeader.pch */,
+				2B5C94BD222388D600508F4A /* CommonFuction.h */,
+				2B5C94BE222388D600508F4A /* CommonFuction.m */,
 				2B6C971F221F8F5000483DEA /* AppDelegate.h */,
 				2B6C9720221F8F5000483DEA /* AppDelegate.m */,
 				2B6C9722221F8F5000483DEA /* ViewController.h */,
@@ -199,6 +208,11 @@
 				TargetAttributes = {
 					2B6C971B221F8F5000483DEA = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2B6C9733221F8F5100483DEA = {
 						CreatedOnToolsVersion = 10.1;
@@ -265,6 +279,7 @@
 				2B6C9724221F8F5000483DEA /* ViewController.m in Sources */,
 				2B6C972F221F8F5100483DEA /* main.m in Sources */,
 				2B6C9721221F8F5000483DEA /* AppDelegate.m in Sources */,
+				2B5C94C0222388D600508F4A /* CommonFuction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +450,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FatherApp/FatherApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79MZ7A623K;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FatherApp/PrefixHeader.pch";
 				INFOPLIST_FILE = FatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,8 +470,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FatherApp/FatherApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79MZ7A623K;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FatherApp/PrefixHeader.pch";
 				INFOPLIST_FILE = FatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
